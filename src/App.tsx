@@ -10,7 +10,7 @@ const App = () => (
       <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
         Card 2
       </div>
-      <div className={styles.card} style={{ backgroundColor: "#bdd5ea" }}>
+      <div className={styles.card} style={{ backgroundColor: "#bdd5eb" }}>
         Card 3
       </div>
       <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
