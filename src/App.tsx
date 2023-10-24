@@ -13,8 +13,8 @@ const App = () => (
       <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
         Card 3
       </div>
-      <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
-        Card 4
+      <div className={styles.card} style={{ backgroundColor: "#FFFFFF" }}>
+        HELLO
       </div>
       <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
         Card 5
