@@ -22,8 +22,8 @@ const App = () => (
       <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
         Card 6
       </div>
-      <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
-        Card 7
+      <div className={styles.card} style={{ backgroundColor: "#e03f82" }}>
+        Jake&apos;s card!
       </div>
       <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
         Card 8
