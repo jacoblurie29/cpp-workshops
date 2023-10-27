@@ -22,3 +22,15 @@ This is a workshop to learn:
 4. Run `npm install` in the terminal
 5. Run `npm start` in the terminal
 6. Open [localhost:3000](http://localhost:3000/) in your browser
+
+## Demo for Workshop 2
+ 1) Create button component with basic styles
+ 2) Create an interface for the box information (title, description, color)
+ 3) Create a function with faker to generate a box data
+ 4) Create a component for the boxes (call it Box)
+ 5) Create a onClick function for the button (console.log)
+ 6) Create a state for the boxes
+ 7) Save box to the state when the button is clicked
+ 8) Render the boxes in the page
+ 9) Save the data to local storage using useEffect
+ 10) Load the data from local storage using useEffect on page load
