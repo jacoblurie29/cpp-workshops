@@ -38,7 +38,7 @@ This is a workshop to learn:
 1) Create a new branch called `[yourname]-workshop2`
 2) In `App.tsx` you should generate a random flight using faker functions when you click a button (hint: try creating functions to do this, bonus if you create those functions in a util folder)
 3) The flights should be stored in a state variable and sorted by departure time in ascending order in a useEffect
-4) Create a new component called `FlightTable.tsx` and pass the flights as props
+4) Create a new component called `FlightTable.tsx` and pass the flights as an array in the props
 5) In `FlightTable.tsx` you should display the flights in a table
 6) Create a new component called `FlightRow.tsx` and pass the flight as props, the row should display the flight data in the table
 7) If you have time, save the flights to local storage so that when you refresh the page, the previous flights are still there
