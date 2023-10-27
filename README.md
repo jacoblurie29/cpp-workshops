@@ -41,5 +41,5 @@ This is a workshop to learn:
 4) Create a new component called `FlightTable.tsx` and pass the flights as props
 5) In `FlightTable.tsx` you should display the flights in a table
 6) Create a new component called `FlightRow.tsx` and pass the flight as props, the row should display the flight data in the table
-7) If you have time, save the flights to local storage so that when you refresh the page, the flights are still there
+7) If you have time, save the flights to local storage so that when you refresh the page, the previous flights are still there
 
