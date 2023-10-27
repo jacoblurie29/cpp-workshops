@@ -24,7 +24,7 @@ This is a workshop to learn:
 6. Open [localhost:3000](http://localhost:3000/) in your browser
 
 ## Demo for Workshop 2
- 1) Create button component with basic styles
+ 1) Create button component DONE
  2) Create an interface for the box information (title, description, color)
  3) Create a function with faker to generate a box data
  4) Create a component for the boxes (call it Box)
@@ -34,3 +34,5 @@ This is a workshop to learn:
  8) Render the boxes in the page
  9) Save the data to local storage using useEffect
  10) Load the data from local storage using useEffect on page load
+ 11) Make a page with a button that loads the data on click using fetch
+ 12) Store the data in state and get the data on page load
