@@ -1,8 +1,9 @@
 import React from "react";
 import FlightRow from "./FlightRow";
 import { Flight } from "./App";
+import { FlightTableProps } from "./FlightTable.definitions";
 
-const FlightTable = ({flightList}) =>{
+const FlightTable = ({ flightList }: FlightTableProps) => {
     return <table>
         <thead>
             <tr>
@@ -15,7 +16,7 @@ const FlightTable = ({flightList}) =>{
             </tr>
         </thead>
         <tbody>
-            {flightList.map((flight:Flight)=>(
+            {flightList.map((flight: Flight) => (
                 <FlightRow flight={flight} ></FlightRow>
             ))}
         </tbody>

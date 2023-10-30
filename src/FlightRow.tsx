@@ -1,7 +1,6 @@
-import React from "react";
-import { Flight } from "./App";
+import { FlightRowProps } from "./FlightRow.definitions";
 
-const FlightRow = ({flight}) =>{ //do we not need to specify the type of flight here? 
+const FlightRow = ({ flight }: FlightRowProps) => { //do we not need to specify the type of flight here? 
     return <tr>
         <td>{flight.flightNumber}</td>
         <td>{flight.origin}</td>
