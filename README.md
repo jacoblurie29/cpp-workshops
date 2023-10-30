@@ -3,9 +3,11 @@
 ## Introduction
 
 This is a workshop to learn:
-- Git, GitHub, and VSCode
-- Eslint, Prettier, Husky, and npm
-- File structure, architecture, and naming conventions for frontend
+- React
+- TypeScript
+- Git
+- GitHub
+- Visual Studio Code
 
 ## Prerequisites
 
@@ -36,10 +38,25 @@ This is a workshop to learn:
 
 ###### Here's what you should do:
 1) Create a new branch called `[yourname]-workshop2`
-2) In `App.tsx` you should generate a random flight using faker functions when you click a button (hint: try creating functions to do this, bonus if you create those functions in a util folder)
-3) The flights should be stored in a state variable and sorted by departure time in ascending order in a useEffect
-4) Create a new component called `FlightTable.tsx` and pass the flights as an array in the props
-5) In `FlightTable.tsx` you should display the flights in a table
+2) In `App.tsx` you should generate a random flight using faker functions when you click a button, this should be added to a list of flights which is a state variable of type `Flight[]`
+3) In a useEffect hook, you should sort the flights and update the state variable. You can choose which value to sort it by, make sure the useEffect hook is called when the flights change. Hint: you can use something like `const newList = oldList.sort(...)` function on an array to sort it, google how to sort an array in JavaScript!
+4) Create a new component called `FlightTable.tsx` and pass the flights as an array in the props to the component
+5) In `FlightTable.tsx` you should display the flights in a table, which will be made up of `FlightRow.tsx` components. Give the table a header row with the column names (think about how you can reuse the `FlightRow.tsx` component to do this)
 6) Create a new component called `FlightRow.tsx` and pass the flight as props, the row should display the flight data in the table
-7) If you have time, save the flights to local storage so that when you refresh the page, the previous flights are still there
+7) (optional 1) If you have time, save the flights to local storage so that when you refresh the page, the previous flights are still there
+9) (optional 2) If you have time, use css to make the table and webpage look nicer!
+10) Push you branch to GitHub and let Jake know when you're all done!
 
+
+###### Here's some useful links:
+- [Faker Documentation](https://www.npmjs.com/package/faker)
+- [React Documentation](https://reactjs.org/)
+- [TypeScript Documentation](https://www.typescriptlang.org/)
+- [TypeScript and React examples and walk-through](https://www.telerik.com/blogs/getting-started-typescript-react)
+
+
+###### Reminder:
+- If you get stuck, ask for help!
+- If you're not sure what to do, ask for help!
+- If you're not sure if you're doing it right, ask for help!
+- This should only take 1-2 hours, if you're spending more time than that, ask for help!
