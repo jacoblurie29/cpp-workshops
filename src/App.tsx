@@ -1,38 +1,72 @@
 import styles from "./App.module.css";
+import { type Flight } from "./types";
+import FlightTable from "./components/FlightTable";
+import React, { useEffect } from "react";
 
-const App = () => (
-  <div className={styles.mainContainer}>
-    <h1 className={styles.header}>Welcome to our site!</h1>
-    <div className={styles.cardContainer}>
-      <div className={styles.card} style={{ backgroundColor: "#900EE90" }}>
-        Neelasha's Card
-      </div>
-      <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
-        Card 2
-      </div>
-      <div className={styles.card} style={{ backgroundColor: "#bdd5ea" }}>
-        Card 3
-      </div>
-      <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
-        Card 4
-      </div>
-      <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
-        Card 5
-      </div>
-      <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
-        Card 6
-      </div>
-      <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
-        Card 7
-      </div>
-      <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
-        Card 8
-      </div>
-      <div className={styles.card} style={{ backgroundColor: "#BBBBBB" }}>
-        Card 9
-      </div>
+const App = () => {
+  const [flights, setFlights] = React.useState<Flight[]>([]);
+
+  const sortedFlights = flights.sort((a, b) => {
+    const aTime = a.departureTime.split(":");
+    const bTime = b.departureTime.split(":");
+    if (aTime[0] === bTime[0]) {
+      return parseInt(aTime[1]) - parseInt(bTime[1]);
+    }
+    return parseInt(aTime[0]) - parseInt(bTime[0]);
+  });
+
+  useEffect(() => {
+    setFlights(sortedFlights);
+  }, [flights]);
+
+  const generateFlightCode = () => {
+    const chars = "0123456789abcdefghijklmnopqrstuvwxyz";
+    let result = "";
+    for (let i = 0; i < 6; i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+  };
+
+  const generateAirport = () => {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let result = "";
+    for (let i = 0; i < 3; i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+  };
+
+  const generateTime = () => {
+    const hours = Math.floor(Math.random() * 24);
+    const minutes = Math.floor(Math.random() * 60);
+    return hours + ":" + minutes;
+  };
+
+  const createFlight = () => {
+    const flightCode = generateFlightCode();
+    const airport = generateAirport();
+    const departureTime = generateTime();
+    const arrivalTime = generateTime();
+    setFlights([
+      ...flights,
+      { flightCode, airport, departureTime, arrivalTime },
+    ]);
+  };
+
+  return (
+    <div className={styles.mainContainer}>
+      <h1 className={styles.header}>Welcome to our site!</h1>
+      <button
+        onClick={() => {
+          createFlight();
+        }}
+      >
+        Click me
+      </button>
+      <FlightTable flights={flights} />
     </div>
-  </div>
-);
+  );
+};
 
 export default App;
