@@ -1,4 +1,5 @@
 // component should go here
+import FlightRow from "../FlightRow/FlightRow";
 import * as React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -28,19 +29,7 @@ const FlightTable: React.FC<FlightTableProps> = ({ flights }) => (
       </TableHead>
       <TableBody>
         {flights.map((flight, i) => (
-          <TableRow
-            key={i}
-            sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-          >
-            <TableCell component="th" scope="row">
-              {flight.flightNumber}
-            </TableCell>
-            <TableCell align="right">{flight.origin}</TableCell>
-            <TableCell align="right">{flight.destination}</TableCell>
-            <TableCell align="right">{flight.departureTime}</TableCell>
-            <TableCell align="right">{flight.arrivalTime}</TableCell>
-            <TableCell align="right">{flight.flightDuration}</TableCell>
-          </TableRow>
+          <FlightRow key={i} flight={flight} />
         ))}
       </TableBody>
     </Table>
